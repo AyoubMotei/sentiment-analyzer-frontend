@@ -27,13 +27,13 @@ Application web interactive permettant d'analyser le sentiment de textes avec un
 
 #### Page d'accueil
 ```
-<img width="1007" height="843" alt="page d&#39;accueil" src="https://github.com/user-attachments/assets/420f6bbc-75b4-433d-9bbd-a1a7e3003674" />
+<img width="1007" height="843" alt="Image" src="https://github.com/user-attachments/assets/92a8fb40-faf8-421f-90e3-4c168fddc341" />
 
 ```
 
 #### Page d'analyse
 ```
-<img width="916" height="863" alt="page d&#39;analyse" src="https://github.com/user-attachments/assets/364dab4e-0b69-4823-b774-622d4bc9ac1a" />
+<img width="916" height="863" alt="Image" src="https://github.com/user-attachments/assets/9b015d04-a9de-4eb5-b89d-de81598f7cdb" />
 
 
 ```
