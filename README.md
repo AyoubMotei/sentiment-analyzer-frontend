@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #  Sentiment Analysis - Frontend
 
 Interface web moderne développée avec Next.js et TypeScript pour l'analyse de sentiment en temps réel.
@@ -498,3 +499,6 @@ Ce projet est sous licence MIT.
 
 
 
+=======
+# sentiment-analyzer-frontend
+>>>>>>> 13d72b8e0bccc4cae2e24c1692c5d700086df14a
