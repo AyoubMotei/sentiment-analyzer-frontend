@@ -1,65 +1,129 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { isAuthenticated } from "@/lib/api";
+
+// ============================================
+// COMPOSANT : Page d'accueil
+// ============================================
+
+export default function HomePage() {
+  const router = useRouter();
+  const [mounted, setMounted] = useState(false);
+
+  // Attendre que le composant soit monté (pour éviter les erreurs SSR)
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Fonction pour aller à la page de login
+  const goToLogin = () => {
+    router.push("/login");
+  };
+
+  // Fonction pour aller à la page de sentiment (si connecté)
+  const goToSentiment = () => {
+    // Vérifier si l'utilisateur est déjà connecté
+    if (mounted && isAuthenticated()) {
+      router.push("/sentiment");
+    } else {
+      router.push("/login");
+    }
+  };
+
+  // Ne rien afficher tant que le composant n'est pas monté 
+  if (!mounted) {
+    return null;
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    // Conteneur principal avec gradient
+    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center px-4">
+      
+      {/* Carte centrale */}
+      <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-12 max-w-2xl w-full">
+        
+        {/* Emoji et titre */}
+        <div className="text-center mb-8">
+          <div className="text-8xl mb-6">🎭</div>
+          <h1 className="text-5xl font-extrabold text-gray-800 mb-4">
+            Analyse de Sentiment
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl text-gray-600">
+            Découvrez le sentiment caché dans vos textes
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Section des fonctionnalités */}
+        <div className="space-y-4 mb-8">
+          <div className="flex items-start space-x-3">
+            <span className="text-2xl">✨</span>
+            <div>
+              <h3 className="font-bold text-gray-800">Analyse instantanée</h3>
+              <p className="text-gray-600 text-sm">
+                Obtenez le sentiment de n'importe quel texte en quelques secondes
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start space-x-3">
+            <span className="text-2xl">🌍</span>
+            <div>
+              <h3 className="font-bold text-gray-800">Multilingue</h3>
+              <p className="text-gray-600 text-sm">
+                Supporte le français, l'anglais et bien d'autres langues
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start space-x-3">
+            <span className="text-2xl">🤖</span>
+            <div>
+              <h3 className="font-bold text-gray-800">Intelligence artificielle</h3>
+              <p className="text-gray-600 text-sm">
+                Propulsé par le modèle BERT de Hugging Face
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start space-x-3">
+            <span className="text-2xl">🔒</span>
+            <div>
+              <h3 className="font-bold text-gray-800">Sécurisé</h3>
+              <p className="text-gray-600 text-sm">
+                Authentification JWT pour protéger vos données
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
+
+        {/* Boutons d'action */}
+        <div className="space-y-3">
+          <button
+            onClick={goToSentiment}
+            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-xl font-bold text-lg hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 shadow-lg"
+          >
+            🚀 Commencer l'analyse
+          </button>
+
+          <button
+            onClick={goToLogin}
+            className="w-full border-2 border-gray-300 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-50 transition-colors"
+          >
+            🔑 Se connecter
+          </button>
+        </div>
+
+        {/* Footer */}
+        <div className="mt-8 pt-6 border-t border-gray-200">
+          <p className="text-center text-sm text-gray-500">
+            Développé avec ❤️ par AYOUB MOTEI
+            <br />
+            FastAPI • Next.js • TypeScript • Tailwind CSS
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
