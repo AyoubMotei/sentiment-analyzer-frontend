@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #  Sentiment Analysis - Frontend
 
 Interface web moderne développée avec Next.js et TypeScript pour l'analyse de sentiment en temps réel.
@@ -220,7 +219,7 @@ L'application sera disponible sur : **http://localhost:3000**
 
 ---
 
-## 📄 Structure des pages
+##  Structure des pages
 
 ### 1. Page d'accueil `/`
 
@@ -470,35 +469,16 @@ Configurez `NEXT_PUBLIC_API_URL` sur votre plateforme de déploiement.
 ---
 
 
-##  Contribution
 
-Les contributions sont les bienvenues ! Pour contribuer :
 
-1. Fork le projet
-2. Créez une branche (`git checkout -b feature/AmazingFeature`)
-3. Committez vos changements (`git commit -m 'Add AmazingFeature'`)
-4. Push vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrez une Pull Request
-
----
-
-## 📝 Licence
-
-Ce projet est sous licence MIT.
-
----
-
-## 👨‍💻 Auteur
+## Auteur
 
 **AYOUB MOTEI**
 
-- 📧 Email : ayoub.motei@gmail.com
-- 🐙 GitHub : [@AyoubMotei]
+- Email : ayoub.motei@gmail.com
+- GitHub : @AyoubMotei
 
 ---
 
 
 
-=======
-# sentiment-analyzer-frontend
->>>>>>> 13d72b8e0bccc4cae2e24c1692c5d700086df14a
