@@ -469,12 +469,22 @@ Configurez `NEXT_PUBLIC_API_URL` sur votre plateforme de déploiement.
 ---
 
 
+<<<<<<< HEAD
 ##  Auteur
+=======
+
+
+## Auteur
+>>>>>>> develop
 
 **AYOUB MOTEI**
 
 - Email : ayoub.motei@gmail.com
+<<<<<<< HEAD
 - GitHub : [@AyoubMotei]
+=======
+- GitHub : @AyoubMotei
+>>>>>>> develop
 
 ---
 
