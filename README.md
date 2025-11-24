@@ -65,7 +65,7 @@ Application web interactive permettant d'analyser le sentiment de textes avec un
 
 ---
 
-## 🛠️ Technologies utilisées
+##  Technologies utilisées
 
 | Technologie | Version | Usage |
 |-------------|---------|-------|
@@ -219,7 +219,7 @@ L'application sera disponible sur : **http://localhost:3000**
 
 ---
 
-## 📄 Structure des pages
+##  Structure des pages
 
 ### 1. Page d'accueil `/`
 
