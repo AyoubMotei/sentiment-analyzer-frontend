@@ -26,42 +26,11 @@ Application web interactive permettant d'analyser le sentiment de textes avec un
 ### Captures d'écran
 
 #### Page d'accueil
-```
-┌────────────────────────────────────┐
-│         🎭 Analyse de Sentiment    │
-│  Découvrez le sentiment caché      │
-│      dans vos textes               │
-│                                    │
-│  ✨ Analyse instantanée            │
-│  🌍 Multilingue                    │
-│  🤖 Intelligence artificielle      │
-│  🔒 Sécurisé                       │
-│                                    │
-│  [🚀 Commencer l'analyse]         │
-│  [🔑 Se connecter]                │
-└────────────────────────────────────┘
-```
+![page d'accueil](/images/Home.png)
+
 
 #### Page d'analyse
-```
-┌────────────────────────────────────┐
-│  Analyse de Sentiment 🎭   [Déco] │
-│                                    │
-│  Entrez votre texte à analyser :   │
-│  ┌──────────────────────────────┐ │
-│  │ Ce produit est excellent!    │ │
-│  │                              │ │
-│  └──────────────────────────────┘ │
-│                                    │
-│  [🔍 Analyser le sentiment]       │
-│                                    │
-│  📊 Résultat de l'analyse          │
-│  ┌──────────────────────────────┐ │
-│  │ POSITIF               😍      │ │
-│  │ Score: 5/5 ███████████ 100%  │ │
-│  └──────────────────────────────┘ │
-└────────────────────────────────────┘
-```
+![page d'accueil](/images/Sentiment.png)
 
 ---
 
@@ -447,18 +416,7 @@ transition-all      /* Animation de toutes les propriétés */
 "text-yellow-600 bg-yellow-50 border-yellow-200"
 ```
 
----
-
-
-### Variables d'environnement en production
-
-Configurez `NEXT_PUBLIC_API_URL` sur votre plateforme de déploiement.
-
----
-
 ## Sécurité
-
-### Bonnes pratiques
 
  Token stocké dans localStorage (pas de cookies)  
  Vérification du token à chaque navigation  
@@ -466,25 +424,12 @@ Configurez `NEXT_PUBLIC_API_URL` sur votre plateforme de déploiement.
  Suppression du token à la déconnexion  
 
 
----
-
-
-<<<<<<< HEAD
 ##  Auteur
-=======
-
-
-## Auteur
->>>>>>> develop
 
 **AYOUB MOTEI**
 
-- Email : ayoub.motei@gmail.com
-<<<<<<< HEAD
-- GitHub : [@AyoubMotei]
-=======
-- GitHub : @AyoubMotei
->>>>>>> develop
+-  Email : ayoub.motei@gmail.com
+-  GitHub : [@AyoubMotei](https://github.com/AyoubMotei)
 
 ---
 
